@@ -63,12 +63,15 @@ ROBOTSTXT_OBEY = False
 
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
+
+# 对应3个itempipeline
 ITEM_PIPELINES = {
     'images360.pipelines.ImagePipeline': 300,
     'images360.pipelines.MongoPipeline': 301,
     'images360.pipelines.MysqlPipeline': 302,
 }
 
+# 保存图片的路径地址
 IMAGES_STORE = './images'
 
 # Enable and configure the AutoThrottle extension (disabled by default)
@@ -92,11 +95,14 @@ IMAGES_STORE = './images'
 # HTTPCACHE_IGNORE_HTTP_CODES = []
 # HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 
+# 最大翻页数
 MAX_PAGE = 50
 
+# mongodb设置
 MONGO_URI = 'localhost'
 MONGO_DB = 'images360'
 
+# mysql设置
 MYSQL_HOST = 'localhost'
 MYSQL_DATABASE = 'images360'
 MYSQL_USER = 'root'

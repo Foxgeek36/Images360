@@ -9,6 +9,7 @@ from scrapy import Item, Field
 
 
 class ImageItem(Item):
+    # attention: 将mongodb&mysql的表明做统一设置
     collection = table = 'images'
     
     id = Field()
