@@ -102,5 +102,5 @@ class ImagePipeline(ImagesPipeline):
             raise DropItem('Image Downloaded Failed')
         return item
     
-    def get_media_requests(self, item, info):
+    def get_media_requests(self, item, info):  # 注意该函数的作用/ ->承接处理上一个函数下载失败的item?
         yield Request(item['url'])
