@@ -85,7 +85,7 @@ class MysqlPipeline():
 
 class ImagePipeline(ImagesPipeline):
     '''
-    下载图片保存至本地/ 为最先执行顺序
+    下载图片保存至本地/ 为最先执行顺序->先对下载结果做判断处理再依次将数据存储至mongodb&mysql中
     '''
     def file_path(self, request, response=None, info=None):
         url = request.url
