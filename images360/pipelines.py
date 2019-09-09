@@ -9,7 +9,7 @@ import pymongo
 import pymysql
 from scrapy import Request
 from scrapy.exceptions import DropItem
-from scrapy.pipelines.images import ImagesPipeline  # scrapy自带的下载图片的操作类
+from scrapy.pipelines.images import ImagesPipeline  # scrapy自带的下载图片的操作类/ 查看官方文档及源码
 
 
 class MongoPipeline(object):
