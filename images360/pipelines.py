@@ -104,4 +104,7 @@ class ImagePipeline(ImagesPipeline):
         return item
     
     def get_media_requests(self, item, info):  # 注意该函数的作用/ ->承接处理上一个函数下载失败的item?
+        '''
+        [继承父类的方法]
+        '''
         yield Request(item['url'])
