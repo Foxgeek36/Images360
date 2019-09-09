@@ -27,7 +27,7 @@ class ImagesSpider(Spider):
     def parse(self, response):
         result = json.loads(response.text)
         for image in result.get('list'):
-            item = ImageItem()
+            item = ImageItem()  # attention:此处是每次都生成一个空的item对象/ 返回的是一个被赋值的item数据对象
             item['id'] = image.get('imageid')
             item['url'] = image.get('qhimg_url')
             item['title'] = image.get('group_title')
