@@ -96,7 +96,7 @@ class ImagePipeline(ImagesPipeline):
     # attention +--
     def item_completed(self, results, item, info):
         '''
-        对图片下载结果做判断/ 注意参数results
+        [继承父类的方法]对图片下载结果做判断/ 注意参数results
         '''
         image_paths = [x['path'] for ok, x in results if ok]
         if not image_paths:
